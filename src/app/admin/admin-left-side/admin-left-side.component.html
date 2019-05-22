@@ -1,0 +1,47 @@
+<aside class="main-sidebar">
+  <!-- sidebar: style can be found in sidebar.less -->
+  <section class="sidebar">
+    <!-- Sidebar user panel -->
+    <div class="user-panel">
+      <div class="pull-left image">
+        <img src="assets/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+      </div>
+      <div class="pull-left info">
+        <p>{{auth.getUser().name}}</p>
+        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+      </div>
+    </div>
+    <!-- search form -->
+    <form action="#" method="get" class="sidebar-form">
+      <div class="input-group">
+        <input type="text" name="q" class="form-control" placeholder="Search...">
+        <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+      </div>
+    </form>
+    <!-- /.search form -->
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="sidebar-menu">
+      <li class="header">Menu De Navegação</li>
+
+
+      <!-- Sidebar Menu -->
+        <ul class="sidebar-menu">
+          <!--<li class="header">HEADER</li>-->
+          <!-- Optionally, you can add icons to the links -->
+          <li><a href="#"><i class="fa fa-users"></i> <span>Criar Usuários</span></a></li>
+          <li><a [routerLink]="['/admin/list']"><i class="fa fa-link"></i> <span>Listar Cds</span></a></li>
+          <li><a [routerLink]="['/admin/cadastro']"><i class="fa fa-link"></i> <span>Cadastrar Cd</span></a></li>
+          <li><a [routerLink]="['/admin/artistasList']"><i class="fa fa-link"></i> <span>Artistas</span></a></li>
+          <li><a [routerLink]="['/admin/generosList']"><i class="fa fa-link"></i> <span>Genero Musical</span></a></li>
+
+
+
+        </ul>
+
+    </ul>
+  </section>
+  <!-- /.sidebar -->
+</aside>

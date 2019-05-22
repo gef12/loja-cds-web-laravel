@@ -1,0 +1,25 @@
+.app-login .row{margin-top: 20vh;}
+.app-login .panel-body{box-shadow: 0px 0px 10px 3px #ccc}
+
+.app-login .row{margin-top: 20vh;}
+.app-login .panel-body{box-shadow: 0px 0px 10px 3px rgb(156, 124, 124);
+}
+
+.ini{
+
+  background-image: url("/assets/img/a.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size:100%;
+    bottom: 0;
+    color: black;
+    left: 0;
+    overflow: auto;
+    padding: 3em;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    background-size: cover;
+
+}

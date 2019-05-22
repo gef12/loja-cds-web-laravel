@@ -1,0 +1,150 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Inserção de Genero e Artista do Cds
+    </h1>
+    <div class="box-footer" >
+        <div>
+          <h5 style="color:red; float: right;padding-right: 40%">* Entre com pelo menos 1 genero e 1 artista ou o cd sera Deletado</h5>
+        </div>
+        <button type="submit" class="btn btn-success"  (click)="onSubmit()" [disabled]="cont">Salvar</button>
+
+    </div>
+    <ol class="breadcrumb">
+      <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li><a href="/admin/users">Usuários</a></li>
+      <li class="active"><a href="/admin/users/create">Cadastrar</a></li>
+    </ol>
+  </section>
+
+  <!-- Main content -->
+  <div class="group">
+  <div id="DivRodape">
+  <section class="content">
+
+      <div>
+        <h3>CD:</h3>
+      </div>
+
+
+
+      <div class="box-body no-padding">
+
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th style="width: 1px">#</th>
+                <th>Artistas</th>
+                <th style="width: 100px">&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr *ngFor="let artista of artistaCds">
+                <td>{{ artista.artista_id }}</td>
+                <td >{{ artista.name }}</td>
+                <td>
+                    <a onclick="return confirm('Deseja realmente excluir este registro?')" (click)="deletarArtistaCds(artista.artista_id)" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <div class="box-body no-padding">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th style="width: 1px">#</th>
+                  <th>Generos</th>
+                  <th style="width: 100px">&nbsp;</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <tr *ngFor="let genero of generoCds">
+                  <td>{{ genero.genero_id }}</td>
+                  <td >{{ genero.name }}</td>
+                  <td>
+                      <a onclick="return confirm('Deseja realmente excluir este registro?')" (click)="deletarGeneroCds(genero.genero_id)" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+  </section>
+</div>
+
+
+
+
+  <div id="DivA">
+  <section class="content">
+
+      <div class="box-body no-padding">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th style="width: 10px">#</th>
+                <th>Nome Artista</th>
+                <th style="width: 100px">&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let artista of artista">
+                  <td>{{ artista.id }}</td>
+                  <td >{{ artista.name }}</td>
+                  <td>
+                    <a (click)="incluirArtistaCds(artista.id)" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Incluir</a>
+                  </td>
+                </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+  </section>
+</div>
+
+<div id="DivLateral">
+  <section class="content">
+
+      <div class="box-body no-padding">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th style="width: 1px">#</th>
+                <th>Nome Genero</th>
+                <th style="width: 100px">&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr *ngFor="let genero of genero">
+                <td>{{ genero.id }}</td>
+                <td >{{ genero.name }}</td>
+                <td>
+                  <a (click)="incluirGeneroCds(genero.id)" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Incluir</a>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+  </section>
+</div>
+</div>
+  <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
