@@ -1,3 +1,13 @@
+=========== 
+Acerca
+
+
+Este projeto envolve o uso do tamplete admin-lte juntamente com o crud de uma loja de CDs online a ideia e acessar uma api rest para salvar, editar e excluir etc.
+
+Foi utilizado JWT para a fazer a parte de login e cadastro de novos user, juntamente com o JWT um middleware foi utilizado para capturar o token de validação das demais request e envia-lo 
+
+
+
 Introduction
 ============
 
